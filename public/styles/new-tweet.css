@@ -1,0 +1,23 @@
+#formTop{
+    border-bottom: 2px solid;
+}
+.counter {
+    float:right;
+    font-family: "Bungee";
+    margin: 10px;
+}
+
+.container {
+    width: 80%;
+}
+button {
+    background-color: #4056A1;
+    color: white;
+    font-family: "Bungee";
+    margin: 10px;
+}
+textarea {
+    border:none;
+    width: 100%;
+    background-color :#f4f1ec ;
+}
