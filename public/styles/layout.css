@@ -20,9 +20,17 @@ body {
   font-size: 24px;
   font-family:"Source Sans Pro",sans-serif;
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */#bungee {
    font-family:"Bungee",sans-serif;
  }
+
+ main {
+   position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color :#f4f1ec ;
+  margin-top: 20px;
+}
