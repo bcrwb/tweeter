@@ -34,3 +34,45 @@ body {
   background-color :#f4f1ec ;
   margin-top: 20px;
 }
+article {
+  border: 2px solid black;
+  padding:10px;
+  margin-top:50px;
+}
+article .username{
+  float:right;
+  visibility: hidden;
+}
+.red {
+  color:red;
+}
+
+article img{
+  height:40px;
+}
+
+article .date{
+  font-size: 15px;
+}
+article hr{
+  border: 2px solid;
+}
+
+article:hover{
+  box-shadow: 5px 10px #4056A1;
+}
+
+article:hover .username{
+  visibility: visible;
+  color:#4056A1;
+}
+
+article .icons{
+  float:right;
+  font-size: 15px;
+  color:#4056A1;
+}
+
+article i {
+  padding:5px;
+}
