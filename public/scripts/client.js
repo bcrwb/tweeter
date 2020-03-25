@@ -32,18 +32,27 @@ $(document).ready(function () {
         let posted = $('.container').append(tweets);
         return posted;
     }
-    
+
+   
+       
     $(".form").submit(function(event) {
         event.preventDefault()
         console.log('submit');
         let data = $('form').serialize();
-        $.ajax({
-            url: '/tweets',
-            type: "POST",
-            data: data
-        }).then(function(){
-            console.log('succes');
-        });
+        if($('.counter').val() >= 140){
+            alert("Please enter something");
+        } else if ($('.counter').val()<0){
+            alert('Tweet too Long')
+        } else {
+            $.ajax({
+                url: '/tweets',
+                type: "POST",
+                data: data
+            }).then(function(){
+                console.log('succes');
+                loadTweets();
+            });
+        }
     });
 
         const loadTweets = ()=>{
@@ -57,8 +66,13 @@ $(document).ready(function () {
         });
           
         
-        
-    }
-    loadTweets();
+        }
     
+        loadTweets();
+    
+    
+
+
 });
+    
+    
