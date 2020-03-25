@@ -39,6 +39,7 @@ $(document).ready(function () {
         event.preventDefault()
         console.log('submit');
         let data = $('form').serialize();
+        $("#tweet-text").val(' ');
         if($('.counter').val() >= 140){
             alert("Please enter something");
         } else if ($('.counter').val()<0){
@@ -67,8 +68,8 @@ $(document).ready(function () {
           
         
         }
-    
-        loadTweets();
+        
+       // loadTweets();
     
     
 
