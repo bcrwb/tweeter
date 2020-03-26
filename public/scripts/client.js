@@ -8,10 +8,12 @@ $(document).ready(function () {
    
     const createTweetElement = (tweet) => {
         const { name, avatars, handle } = tweet.user;
-        let html = `
+        let userInfo = `
             <img src="${avatars}">
-            <span>${name}</span><span class ="username">${handle}</span>
-            <p>${tweet.content.text} </p>
+            <span>${name}</span><span class ="username">${handle}</span>`
+               
+        let safeUserInfo = $('<p>').text(tweet.content.text)
+        let genericInfo = `
             <hr>
             <span class ="date">Date</span>
             <span class="icons">
@@ -21,8 +23,11 @@ $(document).ready(function () {
             </span>
         `
         const $tweet = $("<article>").addClass("tweet")
-        let post = $tweet.append(html)
-        return post
+        let first = $tweet.append(userInfo)
+        let second = first.append(safeUserInfo)
+        let third = second.append(genericInfo)
+
+        return third
     }
     const renderTweets = (tweetArray) => {
         let tweets = [];
@@ -38,7 +43,7 @@ $(document).ready(function () {
     $(".form").submit(function(event) {
         event.preventDefault()
         console.log('submit');
-        let data = $('form').serialize();
+        let data = $('form').serialize()
         $("#tweet-text").val(' ');
         if($('.counter').val() >= 140){
             alert("Please enter something");
@@ -50,7 +55,7 @@ $(document).ready(function () {
                 type: "POST",
                 data: data
             }).then(function(){
-                console.log('succes');
+                console.log('success');
                 loadTweets();
             });
         }
