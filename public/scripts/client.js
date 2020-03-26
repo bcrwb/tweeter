@@ -46,10 +46,14 @@ $(document).ready(function () {
         let data = $('form').serialize()
         $("#tweet-text").val(' ');
         if($('.counter').val() >= 140){
-            alert("Please enter something");
+            $('.error').addClass('visible')
+            $('.error').html("Please Enter Something!");
         } else if ($('.counter').val()<0){
-            alert('Tweet too Long')
+            $('.error').addClass('visible')
+            $('.error').html("Tweet Too Long!");
         } else {
+            $('.counter').val(140);
+            $('.error').removeClass('visible')
             $.ajax({
                 url: '/tweets',
                 type: "POST",

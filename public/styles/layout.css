@@ -76,3 +76,13 @@ article .icons{
 article i {
   padding:5px;
 }
+.error{
+  color:red;
+  border:2px solid red;
+  padding:5px;
+  visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
+}
