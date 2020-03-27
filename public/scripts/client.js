@@ -34,7 +34,7 @@ $(document).ready(function () {
         for (let tweet of tweetArray) {
             tweets.push(createTweetElement(tweet))
         }
-        let posted = $('.container').append(tweets);
+        let posted = $('.tweet-container').html(tweets);
         return posted;
     }
 
@@ -78,7 +78,7 @@ $(document).ready(function () {
         
         }
         
-       // loadTweets();
+        loadTweets();
     
     
 

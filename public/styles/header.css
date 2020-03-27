@@ -2,10 +2,7 @@ header {
     height: 400px;
     width: 100%;
     text-align: center;
-    position: relative;
-    top: 120px;
-    margin-bottom:150px;
-    /* bottom:50%; */
+    
     background-color: rosybrown;
     background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
