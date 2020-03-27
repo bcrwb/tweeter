@@ -96,15 +96,11 @@ article i {
   .flex-container {
     flex-direction: column;
     align-items: flex-start;
-    
-
   }  
   nav {
     display:none;
-
+    }
   }
-  
-}
 
 @media only screen and (min-width: 768px) {
   header{
@@ -113,6 +109,9 @@ article i {
 
   header{
     margin-top: 200px;
+  }
+  .new-tweet{
+    margin-top: 150px;
   }
 
 }
