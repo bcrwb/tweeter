@@ -2,6 +2,10 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
+## Technologies Used
+
+HTML, CSS, Javascript, JQUERY, AJAX.
+
 
 
 ## Final Product
