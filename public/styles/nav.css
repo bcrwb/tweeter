@@ -11,4 +11,10 @@ nav {
 
 nav span {
     font-family: "Bungee";
+
+}
+
+#compose{
+    float:right;
+    border:none;
 }

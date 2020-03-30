@@ -31,8 +31,9 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <div class="flex-container">
-    <nav>
-      <span id ="bungee">tweeter</span>
+    <nav id="nav">
+      <span id="bungee">tweeter</span>
+      <button id="compose">Compose Tweet</button>
     </nav>
 
     <header>
@@ -49,7 +50,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        
         <p class = "error">Error</p>
         <form class="form" method="POST" action="/tweets">
           <div id = "formTop">

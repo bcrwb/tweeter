@@ -7,6 +7,8 @@
 $(document).ready(function () {
    //Takes the tweet object and puts data into html
     const createTweetElement = (tweet) => {
+        let d = new Date();
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const { name, avatars, handle } = tweet.user;
         let userInfo = `
             <img src="${avatars}">
@@ -15,7 +17,7 @@ $(document).ready(function () {
         let safeUserInfo = $('<p>').text(tweet.content.text);
         let genericInfo = `
             <hr>
-            <span class ="date">Date</span>
+            <span class ="date">${days[d.getDay()]}</span>
             <span class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -34,7 +36,9 @@ $(document).ready(function () {
         let tweets = [];
         for (let tweet of tweetArray) {
             tweets.push(createTweetElement(tweet));
+           
         }
+        tweets.reverse()
         let posted = $('.tweet-container').html(tweets);
         return posted;
     }
@@ -45,7 +49,7 @@ $(document).ready(function () {
         event.preventDefault()
         console.log('submit');
         let data = $('form').serialize()
-        $("#tweet-text").val(' ');
+       
         if($('.counter').val() >= 140){
             $('.error').addClass('visible')
             $('.error').html("Please Enter Something!");
@@ -55,6 +59,7 @@ $(document).ready(function () {
         } else {
             $('.counter').val(140);
             $('.error').removeClass('visible')
+            $("#tweet-text").val(' ');
             $.ajax({
                 url: '/tweets',
                 type: "POST",
@@ -81,7 +86,9 @@ $(document).ready(function () {
         
         loadTweets();
     
-    
+        $('#compose').click(function(event){
+            $('.new-tweet').toggleClass('show')
+        })
 
 
 });

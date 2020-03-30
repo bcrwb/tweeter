@@ -33,6 +33,7 @@ body {
   margin-right: auto;
   background-color :#f4f1ec ;
   margin-top: 20px;
+  padding-right: 100px;
 }
 article {
   border: 2px solid black;
@@ -97,14 +98,22 @@ article i {
     flex-direction: column;
     align-items: flex-start;
   }  
-  nav {
-    display:none;
-    }
+  #nav {
+    background-color: rosybrown;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  }
+  #compose{
+    background-color: rosybrown;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+
+  }
+  
   }
 
 @media only screen and (min-width: 768px) {
   header{
     margin:100px;
+      
   }
 
   header{
@@ -114,5 +123,16 @@ article i {
     margin-top: 150px;
   }
 
+  .container{
+    margin-top: 150px;
+  }
+
 }
 
+.new-tweet{
+  display: none;
+}
+
+.show{
+  display:inline;
+}

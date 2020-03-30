@@ -1,7 +1,8 @@
 header {
-    height: 400px;
+    height: 50%;
     width: 100%;
     text-align: center;
+    padding-top: 120px;
     
     background-color: rosybrown;
     background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
